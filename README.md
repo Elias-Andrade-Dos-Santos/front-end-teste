@@ -1,41 +1,38 @@
-Aqui está o README formatado em Markdown:
 
-```markdown
-# 📋 Nome da Aplicação React.js
+    <h1>📋 Nome da Aplicação React.js</h1>
+    <p><strong>Descrição breve</strong>: Uma aplicação web desenvolvida em React.js para gerenciamento de pacientes e atendimentos, proporcionando uma interface intuitiva e funcional para controle clínico.</p>
 
-**Descrição breve**: Uma aplicação web desenvolvida em React.js para gerenciamento de pacientes e atendimentos, proporcionando uma interface intuitiva e funcional para controle clínico.
+    <h2>🖥️ Demonstração</h2>
+    <p>Adicione capturas de tela aqui ou links para a aplicação em produção (se disponível).</p>
 
-## 🖥️ Demonstração
+    <hr>
 
-Adicione capturas de tela aqui ou links para a aplicação em produção (se disponível).
+    <h2>🧩 Funcionalidades</h2>
+    <ul>
+        <li><strong>Cadastro de Pacientes</strong>: Adicione, edite, inative e remova pacientes com controle de informações pessoais e endereço.</li>
+        <li><strong>Gerenciamento de Atendimentos</strong>: Registre, edite, inative e visualize consultas e tratamentos de cada paciente.</li>
+        <li><strong>Filtros Personalizados</strong>: Filtre pacientes e atendimentos com base em critérios específicos, como status e data.</li>
+        <li><strong>Feedback de Erros e Validações</strong>: Mensagens de erro detalhadas para guiar o usuário.</li>
+    </ul>
 
----
+    <hr>
 
-## 🧩 Funcionalidades
+    <h2>🚀 Tecnologias e Ferramentas Utilizadas</h2>
+    <ul>
+        <li><strong>React.js</strong>: Biblioteca principal para construção da interface.</li>
+        <li><strong>TypeScript</strong>: Para tipagem estática e maior segurança do código.</li>
+        <li><strong>Vite.js</strong>: Utilizado para configurar e otimizar o ambiente de desenvolvimento.</li>
+        <li><strong>Sass (SCSS)</strong>: Estilização com componentes modulares e reutilizáveis.</li>
+        <li><strong>Yup e React Hook Form</strong>: Gerenciamento de formulários com validações.</li>
+        <li><strong>Axios</strong>: Para requisições HTTP à API.</li>
+        <li><strong>React Router</strong>: Navegação entre páginas.</li>
+        <li><strong>Context API</strong>: Compartilhamento de estados e dados globais.</li>
+    </ul>
 
-- **Cadastro de Pacientes**: Adicione, edite, inative e remova pacientes com controle de informações pessoais e endereço.
-- **Gerenciamento de Atendimentos**: Registre, edite, inative e visualize consultas e tratamentos de cada paciente.
-- **Filtros Personalizados**: Filtre pacientes e atendimentos com base em critérios específicos, como status e data.
-- **Feedback de Erros e Validações**: Mensagens de erro detalhadas para guiar o usuário.
+    <hr>
 
----
-
-## 🚀 Tecnologias e Ferramentas Utilizadas
-
-- **React.js**: Biblioteca principal para construção da interface.
-- **TypeScript**: Para tipagem estática e maior segurança do código.
-- **Vite.js**: Utilizado para configurar e otimizar o ambiente de desenvolvimento.
-- **Sass (SCSS)**: Estilização com componentes modulares e reutilizáveis.
-- **Yup e React Hook Form**: Gerenciamento de formulários com validações.
-- **Axios**: Para requisições HTTP à API.
-- **React Router**: Navegação entre páginas.
-- **Context API**: Compartilhamento de estados e dados globais.
-
----
-
-## 📂 Estrutura do Projeto
-
-```plaintext
+    <h2>📂 Estrutura do Projeto</h2>
+    <pre>
 📦 NomeDaAplicacao
 ├── 📂 public                # Arquivos públicos (ícones, favicon, etc.)
 ├── 📂 src
@@ -49,91 +46,77 @@ Adicione capturas de tela aqui ou links para a aplicação em produção (se dis
 │   └── 📜 App.tsx           # Arquivo principal do React
 ├── 📜 package.json
 └── 📜 vite.config.js
-```
+    </pre>
 
----
+    <hr>
 
-## 📦 Como Configurar o Projeto Localmente
+    <h2>📦 Como Configurar o Projeto Localmente</h2>
+    <ol>
+        <li><strong>Clone o repositório</strong>:
+            <pre>
+git clone https://github.com/seuusuario/nome-do-repositorio.git
+cd nome-do-repositorio
+            </pre>
+        </li>
+        <li><strong>Instale as dependências</strong>:
+            <pre>npm install</pre>
+        </li>
+        <li><strong>Inicie o servidor local</strong>:
+            <pre>npm run dev</pre>
+        </li>
+        <li><strong>Acesse a aplicação</strong>: Abra o navegador e vá para <code>http://localhost:3000</code>.</li>
+    </ol>
 
-1. **Clone o repositório**:
+    <hr>
 
-    ```bash
-    git clone https://github.com/seuusuario/nome-do-repositorio.git
-    cd nome-do-repositorio
-    ```
+    <h2>📖 Documentação de Uso</h2>
+    <h3>📌 Navegando entre as Páginas</h3>
+    <ul>
+        <li><strong>Pacientes</strong>: Acesse a página de gerenciamento de pacientes para adicionar, editar, e visualizar informações.</li>
+        <li><strong>Atendimentos</strong>: Na seção de atendimentos, registre e organize consultas e outros dados relevantes.</li>
+    </ul>
 
-2. **Instale as dependências**:
+    <h3>🛠️ Configurações</h3>
+    <p>Edite o arquivo <code>src/services/api.ts</code> para alterar a URL base da API, caso necessário.</p>
 
-    ```bash
-    npm install
-    ```
+    <hr>
 
-3. **Inicie o servidor local**:
+    <h2>🌐 Publicação e Deploy</h2>
+    <ol>
+        <li><strong>Build da Aplicação</strong>:
+            <pre>npm run build</pre>
+        </li>
+        <li><strong>Publicação com Vercel ou Netlify</strong>: Siga as instruções na documentação das plataformas para conectar seu repositório.</li>
+    </ol>
 
-    ```bash
-    npm run dev
-    ```
+    <hr>
 
-4. **Acesse a aplicação**: Abra o navegador e vá para `http://localhost:3000`.
+    <h2>🧪 Testes</h2>
+    <p>Descreva os testes disponíveis e a maneira de executá-los, por exemplo:</p>
+    <pre>npm run test</pre>
 
----
+    <hr>
 
-## 📖 Documentação de Uso
+    <h2>👥 Contribuição</h2>
+    <ol>
+        <li>Faça um fork do projeto.</li>
+        <li>Crie uma branch (<code>git checkout -b feature/sua-feature</code>).</li>
+        <li>Commit suas mudanças (<code>git commit -m 'Minha nova feature'</code>).</li>
+        <li>Envie suas alterações (<code>git push origin feature/sua-feature</code>).</li>
+        <li>Abra um Pull Request.</li>
+    </ol>
 
-### 📌 Navegando entre as Páginas
+    <hr>
 
-- **Pacientes**: Acesse a página de gerenciamento de pacientes para adicionar, editar, e visualizar informações.
-- **Atendimentos**: Na seção de atendimentos, registre e organize consultas e outros dados relevantes.
+    <h2>📝 Licença</h2>
+    <p>Este projeto é licenciado sob a Licença MIT. Consulte o arquivo <a href="LICENSE">LICENSE</a> para obter mais detalhes.</p>
 
-### 🛠️ Configurações
+    <hr>
 
-Edite o arquivo `src/services/api.ts` para alterar a URL base da API, caso necessário.
+    <h2>👤 Autor</h2>
+    <p>
+        <strong>Nome do Desenvolvedor</strong>: 
+        <a href="https://github.com/seuusuario">GitHub</a> | 
+        <a href="https://linkedin.com/in/seulinkedin">LinkedIn</a>
+    </p>
 
----
-
-## 🌐 Publicação e Deploy
-
-1. **Build da Aplicação**:
-
-    ```bash
-    npm run build
-    ```
-
-2. **Publicação com Vercel ou Netlify**: Siga as instruções na documentação das plataformas para conectar seu repositório.
-
----
-
-## 🧪 Testes
-
-Descreva os testes disponíveis e a maneira de executá-los, por exemplo:
-
-```bash
-npm run test
-```
-
----
-
-## 👥 Contribuição
-
-1. Faça um fork do projeto.
-2. Crie uma branch (`git checkout -b feature/sua-feature`).
-3. Commit suas mudanças (`git commit -m 'Minha nova feature'`).
-4. Envie suas alterações (`git push origin feature/sua-feature`).
-5. Abra um Pull Request.
-
----
-
-## 📝 Licença
-
-Este projeto é licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter mais detalhes.
-
----
-
-## 👤 Autor
-
-- **Nome do Desenvolvedor**: [GitHub](https://github.com/seuusuario) | [LinkedIn](https://linkedin.com/in/seulinkedin)
-
----
-```
-
-Basta copiar e colar no arquivo `README.md` no seu repositório no GitHub!
