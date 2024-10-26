@@ -1,0 +1,114 @@
+.Modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 50vw; /* Aumentando a largura para 80% da viewport */
+    max-width: 1200px; /* Definindo um limite máximo de largura */
+    max-height: 90vh; /* Definindo altura máxima para ocupar até 90% da altura da viewport */
+    margin: auto;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Ativa a rolagem vertical se o conteúdo ultrapassar a altura */
+    position: relative;
+  }
+  
+  .Overlay {
+    background: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Modal h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .Modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .Modal form div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Modal label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .Modal input,
+  .Modal select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .Modal input:focus,
+  .Modal select:focus {
+    border-color: #007bff;
+  }
+  
+  .Modal button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .Modal button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .Modal button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .Modal button[type="button"] {
+    background-color: #6c757d;
+    color: white;
+    margin-top: 15px;
+  }
+  
+  .Modal button[type="button"]:hover {
+    background-color: #5a6268;
+  }
+  
+  @media (max-width: 600px) {
+    .Modal {
+      width: 90vw; /* Aumentar para ocupar mais espaço em telas pequenas */
+      max-height: 85vh; /* Ajustar para telas menores */
+    }
+  
+    .Modal h2 {
+      font-size: 20px;
+    }
+  
+    .Modal button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .Modal form div {
+      gap: 10px;
+    }
+  }
+  

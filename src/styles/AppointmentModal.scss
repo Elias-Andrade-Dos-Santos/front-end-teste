@@ -1,0 +1,99 @@
+// Modal.scss
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+  
+      input,
+      select {
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+  
+        &:focus {
+          border-color: #007bff;
+          outline: none;
+        }
+      }
+  
+      button {
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:first-of-type {
+          background-color: #007bff;
+          color: #fff;
+          margin-bottom: 0.5rem;
+  
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+  
+        &:last-of-type {
+          background-color: #ddd;
+          color: #333;
+  
+          &:hover {
+            background-color: #ccc;
+          }
+        }
+      }
+    }
+  }
+  
+// Adicione este código no arquivo SCSS para as páginas de paciente e atendimento
+.add-button {
+    background-color: #4CAF50; // verde claro
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: #45A049; // tom mais escuro no hover
+    }
+  
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 128, 0, 0.5); // efeito de foco
+    }
+  }
+  

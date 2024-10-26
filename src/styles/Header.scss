@@ -1,0 +1,43 @@
+// Header.scss
+
+.header {
+  background-color: #f8f9fa; // Cor de fundo clara
+  padding: 10px 20px; // Espaçamento interno
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra leve
+
+  nav {
+    display: flex;
+    justify-content: space-between; // Distribui os itens
+    align-items: center;
+  }
+
+  .nav-buttons {
+    list-style: none; // Remove marcadores
+    display: flex; // Exibe como flexbox
+    gap: 20px; // Espaçamento entre os botões
+
+    li {
+      // Estilos para cada item da lista
+      a {
+        text-decoration: none; // Remove underline
+        color: #ffffff; // Cor do texto
+        background-color: #4CAF50; // Cor de fundo verde
+        padding: 10px 15px; // Espaçamento interno para se parecer com um botão
+        border-radius: 5px; // Bordas arredondadas
+        border: none; // Remove borda
+        font-weight: bold; // Texto em negrito
+        transition: background-color 0.3s, transform 0.2s; // Transições suaves
+
+        &:hover {
+          background-color: #388E3C; // Cor ao passar o mouse
+          transform: translateY(-2px); // Leve elevação ao passar o mouse
+        }
+
+        &:active {
+          background-color: #2E7D32; // Cor ao clicar
+          transform: translateY(0); // Retorna ao normal
+        }
+      }
+    }
+  }
+}

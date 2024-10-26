@@ -1,0 +1,122 @@
+.appointments-page {
+  padding: 20px;
+  background-color: #f8f9fa;
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+
+    input, select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+      width: 200px;
+      height: 40px;
+    }
+  }
+
+  .appointments-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .appointment-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h3 {
+      color: #007bff;
+    }
+
+    p {
+      margin: 5px 0;
+      color: #555;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+
+    .appointment-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      
+      button {
+        padding: 8px 12px;
+        font-size: 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .edit-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      .inactivate-btn {
+        background-color: #ffc107;
+        color: white;
+        border: none;
+
+        &:hover {
+          background-color: #e0a800;
+        }
+      }
+
+      .delete-btn {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+
+        &:hover {
+          background-color: #c82333;
+        }
+      }
+    }
+  }
+}
+// Adicione este código no arquivo SCSS para as páginas de paciente e atendimento
+.add-button {
+  background-color: #4CAF50; // verde claro
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #45A049; // tom mais escuro no hover
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5); // efeito de foco
+  }
+}

@@ -1,0 +1,72 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; // Para garantir que o modal fique acima de outros elementos
+  }
+  
+  .modal {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px; // Largura máxima do modal
+    max-height: 80vh; // Altura máxima do modal
+    overflow-y: auto; // Permite rolagem vertical
+    overflow-x: hidden; // Oculta a rolagem horizontal
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column; // Flexbox para o layout do conteúdo
+    align-items: stretch; // Permite que os filhos ocupem a largura total do modal
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+    text-align: center; // Centraliza o título
+  }
+  
+  input[type='text'],
+  input[type='date'] {
+    width: 100%; // Garante que os inputs ocupem 100% da largura disponível
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; // Garante que o padding não aumente a largura total
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px; // Adiciona espaço entre os botões
+  
+    &:hover {
+      opacity: 0.8; // Efeito de hover
+    }
+  
+    &.edit-btn {
+      background-color: #007bff;
+      color: white;
+    }
+  
+    &.delete-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+  
+    &.cancel-btn {
+      background-color: #6c757d;
+      color: white;
+    }
+  }
+  
