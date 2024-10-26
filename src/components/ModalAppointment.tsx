@@ -25,7 +25,7 @@ const ModalAppointment: React.FC<ModalProps> = ({ appointmenId, appointmenIndex,
   const [patients, setPatients] = useState<Patient[]>([]);
   const { appointment } = useAuth();
 
-  // Carrega os pacientes apenas no modo de cadastro
+  
   useEffect(() => {
     if (!isEditMode) {
       axios.get<Patient[]>('http://localhost:5143/api/Patients?status=active')
@@ -34,7 +34,7 @@ const ModalAppointment: React.FC<ModalProps> = ({ appointmenId, appointmenIndex,
     }
   }, [isEditMode]);
 
-  // Carrega dados do atendimento no modo de edição
+  
   useEffect(() => {
     if (isEditMode && appointment?.[appointmenIndex]) {
       const { patientId, dateTime, description } = appointment[appointmenIndex];

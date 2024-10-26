@@ -28,10 +28,10 @@ const Modal: React.FC<ModalProps> = ({ patient, isEditMode, onSave, onClose }) =
     if (isEditMode && patient) {
       setFormData({
         ...patient,
-        address: { ...patient.address }, // Garantir que o endereço também seja definido
+        address: { ...patient.address }, 
       });
     } else {
-      // Limpa o formulário quando não está no modo de edição
+      
       setFormData({
         name: '',
         cpf: '',

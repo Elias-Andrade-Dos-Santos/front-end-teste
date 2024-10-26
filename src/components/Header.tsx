@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../styles/Header.scss';  // Estilos para o layout fixo
+import '../styles/Header.scss'; 
 
 const Header = () => {
   return (

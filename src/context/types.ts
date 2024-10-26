@@ -18,7 +18,7 @@ export interface Address {
   export interface Appointment {
     id: number,
     patientId: string;
-    dateTime: string; // ou Date, se preferir trabalhar com objetos Date
+    dateTime: string; 
     description: string;
     isActive: boolean;
   }

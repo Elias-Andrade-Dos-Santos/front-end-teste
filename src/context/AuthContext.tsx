@@ -2,7 +2,7 @@ import React, { createContext, useContext, ReactNode, useState } from 'react';
 import axios from 'axios';
 import { Appointment } from './types';
 
-// Definindo a interface para o paciente
+
 interface Address {
   street: string;
   number: string;
@@ -21,7 +21,6 @@ export interface Patient {
   isActive?: boolean;
 }
 
-// Interface do contexto de autenticação
 interface AuthContextData {
   patient: Patient | undefined;
   atua: boolean | undefined;
@@ -42,7 +41,6 @@ interface AuthContextData {
   atualizar: () => void;
 }
 
-// Função auxiliar para tratamento de erros do Axios
 const handleAxiosError = (error: any) => {
   if (axios.isAxiosError(error) && error.response) {
     const errors = error.response.data.errors;
@@ -58,10 +56,10 @@ const handleAxiosError = (error: any) => {
   }
 };
 
-// Criação do contexto
+
 const AuthContext = createContext<AuthContextData | undefined>(undefined);
 
-// Hook para usar o contexto
+
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
@@ -70,7 +68,6 @@ export const useAuth = () => {
   return context;
 };
 
-// Provider do AuthContext
 interface AuthProviderProps {
   children: ReactNode;
 }
@@ -87,7 +84,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setAtua(!atua);
   };
 
-  // Função para buscar pacientes por nome, CPF ou status
   const searchPatients = async (name?: string, cpf?: string, isActive?: boolean) => {
     try {
       const response = await axios.get(`${baseUrl}`, {
@@ -104,7 +100,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  // Função para criar um paciente (POST)
   const createPatient = async (patient: Patient) => {
     try {
       await axios.post(baseUrl, patient);
@@ -114,7 +109,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  // Função para buscar um paciente por ID (GET)
   const getPatientById = async (id: number) => {
     try {
       const response = await axios.get(`${baseUrl}/${id}`);
@@ -125,7 +119,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  // Função para atualizar um paciente por ID (PUT)
   const updatePatientById = async (id: number, patient: Patient) => {
     try {
       await axios.put(`${baseUrl}/${id}`, patient);
@@ -135,7 +128,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  // Função para deletar um paciente por ID (DELETE)
   const deletePatientById = async (id: number) => {
     try {
       await axios.delete(`${baseUrl}/${id}`);
@@ -146,7 +138,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  // Função para inativar um paciente por ID (PATCH)
   const inactivatePatientById = async (id: number) => {
     try {
       await axios.patch(`${baseUrl}/${id}/inactivate`);
