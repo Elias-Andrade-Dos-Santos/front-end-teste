@@ -1,7 +1,7 @@
 import React, { createContext, useContext, ReactNode, useState } from 'react';
 import axios from 'axios';
 import { Appointment } from './types';
-
+import ErrorModal from '../components/ErrorModal'; // Importe o componente ErrorModal
 
 interface Address {
   street: string;
@@ -41,24 +41,7 @@ interface AuthContextData {
   atualizar: () => void;
 }
 
-const handleAxiosError = (error: any) => {
-  if (axios.isAxiosError(error) && error.response) {
-    const errors = error.response.data.errors;
-    if (errors && Array.isArray(errors)) {
-      errors.forEach((err: any) => {
-        console.error(`Erro no campo ${err.field}: ${err.error}`);
-      });
-    } else {
-      console.error('Erro desconhecido:', error.message);
-    }
-  } else {
-    console.error('Erro:', error.message);
-  }
-};
-
-
 const AuthContext = createContext<AuthContextData | undefined>(undefined);
-
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
@@ -79,9 +62,31 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [patient, setPatient] = useState<Patient | undefined>();
   const [appointment, setAppointment] = useState<Appointment[] | undefined>();
   const [atua, setAtua] = useState<boolean>();
+  const [error, setError] = useState<string | null>(null); // Estado para armazenar mensagens de erro
+  const [isErrorModalOpen, setIsErrorModalOpen] = useState(false); // Estado para o modal
 
   const atualizar = () => {
     setAtua(!atua);
+  };
+
+  const handleAxiosError = (error: any) => {
+    if (axios.isAxiosError(error) && error.response) {
+      const errors = error.response.data.errors;
+      if (errors && Array.isArray(errors)) {
+        const errorMessage = errors.map((err: any) => `Erro no campo ${err.field}: ${err.error}`).join('\n');
+        setError(errorMessage);
+      } else {
+        setError('Erro desconhecido: ' + error.message);
+      }
+    } else {
+      setError('Erro: ' + error.message);
+    }
+    setIsErrorModalOpen(true); // Abre o modal de erro
+  };
+
+  const closeErrorModal = () => {
+    setIsErrorModalOpen(false);
+    setError(null);
   };
 
   const searchPatients = async (name?: string, cpf?: string, isActive?: boolean) => {
@@ -221,28 +226,35 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider
-      value={{
-        appointment,
-        createAppointment,
-        deleteAppointmentById,
-        inactivateAppointmentById,
-        updateAppointmentById,
-        getAppointmentById,
-        searchAppointments,
-        atua,
-        atualizar,
-        patient,
-        setPatient,
-        searchPatients,
-        createPatient,
-        getPatientById,
-        updatePatientById,
-        deletePatientById,
-        inactivatePatientById,
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
+    <>
+      <AuthContext.Provider
+        value={{
+          appointment,
+          createAppointment,
+          deleteAppointmentById,
+          inactivateAppointmentById,
+          updateAppointmentById,
+          getAppointmentById,
+          searchAppointments,
+          atua,
+          atualizar,
+          patient,
+          setPatient,
+          searchPatients,
+          createPatient,
+          getPatientById,
+          updatePatientById,
+          deletePatientById,
+          inactivatePatientById,
+        }}
+      >
+        {children}
+      </AuthContext.Provider>
+      <ErrorModal 
+        isOpen={isErrorModalOpen} 
+        message={error || ''} 
+        onClose={closeErrorModal} 
+      />
+    </>
   );
 };
