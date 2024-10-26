@@ -41,6 +41,7 @@ Adicione capturas de tela aqui ou links para a aplicação em produção (se dis
 │   ├── 📂 components        # Componentes reutilizáveis
 │   ├── 📂 pages             # Páginas principais da aplicação
 │   ├── 📂 services          # Configurações e funções para chamadas de API
+|   |── 📂 styles            # Pasta de Estilização
 │   └── 📜 App.tsx           # Arquivo principal do React
 ├── 📜 package.json
 └── 📜 vite.config.js
@@ -53,7 +54,7 @@ Adicione capturas de tela aqui ou links para a aplicação em produção (se dis
 1. **Clone o repositório**:
 
     ```bash
-    git clone https://github.com/seuusuario/nome-do-repositorio.git
+    git clone https://github.com/Elias-Andrade-Dos-Santos/front-end-teste.git
     cd nome-do-repositorio
     ```
 
@@ -69,7 +70,7 @@ Adicione capturas de tela aqui ou links para a aplicação em produção (se dis
     npm run dev
     ```
 
-4. **Acesse a aplicação**: Abra o navegador e vá para `http://localhost:3000`.
+4. **Acesse a aplicação**: Abra o navegador e vá para `http://localhost:5173/`.
 
 ---
 
