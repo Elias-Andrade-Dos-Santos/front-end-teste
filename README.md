@@ -1,4 +1,4 @@
-Aqui está o README formatado em Markdown para ser usado diretamente no seu repositório no GitHub:
+Aqui está o README formatado em Markdown, pronto para ser usado no seu projeto:
 
 ```markdown
 # 📋 Nome da Aplicação React.js
@@ -40,8 +40,8 @@ Adicione capturas de tela aqui ou links para a aplicação em produção (se dis
 ├── 📂 public                # Arquivos públicos (ícones, favicon, etc.)
 ├── 📂 src
 │   ├── 📂 components        # Componentes reutilizáveis
-│   ├── 📂 pages             # Páginas da aplicação
-│   ├── 📂 services          # Serviços para requisições de API
+│   ├── 📂 pages             # Páginas principais da aplicação
+│   ├── 📂 services          # Configurações e funções para chamadas de API
 │   └── 📜 App.tsx           # Arquivo principal do React
 ├── 📜 package.json
 └── 📜 vite.config.js
@@ -130,4 +130,4 @@ Este projeto é licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICE
 - **Nome do Desenvolvedor**: [GitHub](https://github.com/seuusuario) | [LinkedIn](https://linkedin.com/in/seulinkedin)
 ```
 
-Basta colar este conteúdo em um arquivo `README.md` no seu repositório do GitHub.
+Esse README está em Markdown e é adequado para visualização em plataformas como GitHub.
