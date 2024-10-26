@@ -4,12 +4,6 @@
 
 ---
 
-## 🖥️ Demonstração
-
-Adicione capturas de tela aqui ou links para a aplicação em produção (se disponível).
-
----
-
 ## 🧩 Funcionalidades
 
 - **Cadastro de Pacientes**: Adição, edição, inativação e remoção de pacientes, com controle de informações pessoais e endereço.
