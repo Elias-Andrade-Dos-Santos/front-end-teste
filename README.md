@@ -1,4 +1,4 @@
-# 📋 Nome da Aplicação React.js
+# 📋 Clinica ACME
 
 **Descrição breve**: Aplicação web desenvolvida em React.js para gerenciamento de pacientes e atendimentos, proporcionando uma interface intuitiva e funcional para controle clínico.
 
